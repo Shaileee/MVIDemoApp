@@ -5,7 +5,9 @@
 ![State](https://img.shields.io/badge/Detekt-passing-brightgreen)
 ![State](https://img.shields.io/badge/UnitTest-incomplete-red)
 
-## 🚧 👷🏗️  Under Modifications  🔨👷 🚧
+This sample app highlights a robust Android architecture, emphasizing scalability, maintainability, and testability through the MVI (Model-View-Intent) pattern, making it a valuable reference for developers.
+
+The sample app presents a modern Android application architecture, emphasizing scalability and maintainability through the implementation of MVI (Model-View-Intent).
 
 # Table of Contents
 
@@ -32,14 +34,6 @@ The app topic is Movies and you may find functionalities such as:
 * search movies by name. 
 * see the movie extra details. 
 
-
-## Jetpack components map
-Legend:  
-🟩 Implemented in the app.  
-🟨 Implementing (WIP).  
-⬜ Not yet implemented.
-
-![Default Screen](diagrams/jetpack-mindmap.png)
 
 ## Screenshots
 
