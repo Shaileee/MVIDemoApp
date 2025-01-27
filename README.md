@@ -37,7 +37,7 @@ The app topic is Movies and you may find functionalities such as:
 
 ## Screenshots
 
-![Default Screen](screenshots/default.png "Default Screen")
+![Default Screen](default.png "Default Screen")
 ![Search Screen](screenshots/searching.png "Search Screen")
 ![Detail Screen](screenshots/detail.png "Detail Screen")
 ![Menu Screen](screenshots/menu.png "Menu Screen")
