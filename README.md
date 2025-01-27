@@ -1,4 +1,4 @@
-# Movies
+# Jetpack MVI Sample App
 
 ![State](https://img.shields.io/badge/kotlin-v1.9.20-blueviolet)
 ![State](https://img.shields.io/badge/gradle-v8.1.0-blue)
