@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="find_a_movie">Find a movie</string>
+    <string name="search_title">Search</string>
+    <string name="title">Title</string>
+    <string name="year">Year</string>
+    <string name="released">Released</string>
+    <string name="runtime">Runtime</string>
+    <string name="genre">Genre</string>
+    <string name="director">Director</string>
+    <string name="writer">Writer</string>
+    <string name="actors">Actors</string>
+    <string name="cast">Cast</string>
+    <string name="plot">Plot</string>
+    <string name="language">Language</string>
+    <string name="country">Country</string>
+    <string name="awards">Awards</string>
+    <string name="poster">Poster</string>
+    <string name="rating">Rating</string>
+    <string name="votes">Votes</string>
+    <string name="type">Type</string>
+    <string name="favorite">favorite</string>
+    <string name="favorites_movies">Favorites movies</string>
+    <string name="was_added_to_your_favorite_movie_list">%s was added to your favorite movie list</string>
+    <string name="review_your_favorite_list">Review your favorite list</string>
+    <string name="undo">Undo</string>
+    <string name="go_back">Go Back</string>
+    <string name="detail">Detail</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="empty_list">Empty list</string>
+    <string name="type_a_name">Type a name</string>
+    <string name="red_tomato">Red Tomato</string>
+    <string name="rotten_tomato">Rotten Tomato</string>
+    <string name="empty_tomato">Empty Tomato</string>
+    <string name="current_movie_does_not_have">The current movie does not have an ID. So, it cannot be possible open its detail.</string>
+</resources>

@@ -1,0 +1,130 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    alias(libs.plugins.dagger.hilt.android)
+}
+
+android {
+    namespace = "com.tzion.jetpackmovies"
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.tzion.jetpack"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            dimension "default"
+            applicationId 'com.tzion.jetpack.dev'
+            versionNameSuffix '-dev'
+        }
+        prod {
+            dimension "default"
+            applicationId 'com.tzion.jetpack.prod'
+            versionNameSuffix '-prod'
+        }
+        mock {
+            dimension "default"
+            applicationId 'com.tzion.jetpack.mock'
+            versionNameSuffix '-mock'
+        }
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+    }
+
+    testOptions.unitTests.includeAndroidResources = true
+
+    //https://stackoverflow.com/questions/44342455/more-than-one-file-was-found-with-os-independent-path-meta-inf-license
+    //https://github.com/mockk/mockk/issues/1049
+    packagingOptions {
+        resources.excludes.add("META-INF/LICENSE.md")
+        resources.excludes.add("META-INF/LICENSE-notice.md")
+        resources.excludes.add("MANIFEST.MF")
+    }
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    implementation(platform(libs.compose.bom))
+    implementation libs.bundles.compose
+    implementation libs.bundles.network
+    implementation libs.bundles.lifecycle
+
+    implementation libs.accompanist.navigation.animation
+    implementation libs.hilt.android
+    implementation libs.hilt.navigation.compose
+    implementation libs.appcompat
+    implementation libs.core.ktx
+    implementation libs.coroutines.android
+    implementation libs.glide.main
+    implementation libs.gson
+    implementation libs.landscapist
+    implementation libs.lottie
+    implementation libs.navigation.compose
+    implementation libs.paging
+    implementation libs.paging.compose
+    implementation libs.preference.ktx
+    implementation libs.room.runtime
+    implementation libs.room.ktx
+    implementation libs.timber
+    implementation libs.work
+
+    kapt libs.hilt.compiler
+    kapt libs.lifecycle.compiler
+    kapt libs.glide.compiler
+    kapt libs.room.compiler
+
+    testImplementation libs.bundles.unitTesting
+    testImplementation libs.test.assertj.core
+    testImplementation libs.test.arch
+    testImplementation libs.test.room
+    testImplementation libs.test.robolectric
+
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation libs.android.test.runner
+    androidTestImplementation libs.android.test.espresso.core
+    androidTestImplementation libs.android.test.rules
+    androidTestImplementation libs.android.test.ext
+    androidTestImplementation libs.android.test.espresso.contrib
+    androidTestImplementation libs.android.test.compose.ui
+    androidTestImplementation libs.test.hilt.android
+    androidTestImplementation libs.test.mockk.android
+//    androidTestImplementation libs.test.mockk.agent
+
+    kaptAndroidTest libs.test.hilt.compiler
+
+    debugImplementation(platform(libs.compose.bom))
+    debugImplementation libs.compose.ui.tooling
+    debugImplementation libs.android.test.compose.manifest
+}
