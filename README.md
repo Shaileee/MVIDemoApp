@@ -47,10 +47,13 @@ The app topic is Movies and you may find functionalities such as:
 ```mermaid
 graph LR
 A[Navigation Drawer] --> B[Find Movie Screen]
+A --> G
 B -- input search --> C{Any Result?}
 C -- Yes --> D[Listing Movies Screen]
 C -- No --> E[Empty Screen]
 D -- select --> F[Detail Screen]
+```
+
 
 
 ## Skills you may find
