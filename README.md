@@ -19,8 +19,7 @@ The sample app presents a modern Android application architecture, emphasizing s
    5. [Domain model](#domain-model)
    6. [Architecture](#architecture)
 2. [Resources](#resources)
-3. [Community](#community)
-4. [Additional Android Samples](#additional-android-samples)
+
 
 # Description
 
@@ -79,4 +78,28 @@ G[Favorite Screen]
 ## Domain Model
 The Domain Model pattern is shown here in a very simple way.   
 This project is trying to follow the ideas explained in [Domain-Driven Design book of Eric Evans](https://a.co/d/hnmkp9y).  
+
+## Architecture
+It's strongly recommended to read [Clean Architecture book of Robert C. Martin](https://a.co/d/2zkv7YX) 
+for a better understanding and avoiding misconceptions out there.   
+As a glimpse, read Clean Code blog: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+![CleanArchitecture](screenshots/CleanArchitecture.jpg "Clean Architecture")
+
+# Resources
+![Default Screen](https://blog.jetbrains.com/wp-content/uploads/2019/01/kotlin-2.svg)
+* 📝 **Kotlin Docs:** https://kotlinlang.org/docs/home.html
+* 🚀 **Kotlin Release:** https://github.com/JetBrains/kotlin/releases
+* 📣 **Kotlin Blog:** https://blog.jetbrains.com/kotlin/
+* 🎥 **Kotlin Youtube Channel:** https://www.youtube.com/channel/UCP7uiEZIqci43m22KDl0sNw
+* 🤖 **Kotlin Reddit:** https://www.reddit.com/r/Kotlin/
+* 🤯 **Kotlin StackOverflow:** https://stackoverflow.com/questions/tagged/kotlin
+* 🗺️ **Kotlin Community:** https://kotlinlang.org/community/
+
+![Default Screen](https://developer.android.com/static/images/logos/android.svg)
+
+* 📝 **Platform Architecture:** https://developer.android.com/guide/platform
+* 👩‍💻👨‍💻 **Android Developers:** https://developer.android.com/
+* **Android Jetpack:** https://developer.android.com/jetpack
+* **Sunflower:** https://github.com/android/sunflower
+* **Compose Samples:** https://github.com/android/compose-samples
 
