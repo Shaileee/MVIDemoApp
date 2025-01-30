@@ -82,7 +82,7 @@ This project is trying to follow the ideas explained in [Domain-Driven Design bo
 It's strongly recommended to read [Clean Architecture book of Robert C. Martin](https://a.co/d/2zkv7YX) 
 for a better understanding and avoiding misconceptions out there.   
 As a glimpse, read Clean Code blog: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
-![CleanArchitecture](screenshots/CleanArchitecture.jpg "Clean Architecture")
+![CleanArchitecture](CleanArchitecture.jpg "Clean Architecture")
 
 # Resources
 ![Default Screen](https://blog.jetbrains.com/wp-content/uploads/2019/01/kotlin-2.svg)
