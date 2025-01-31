@@ -50,16 +50,32 @@ class SearchMoviesViewModel @Inject constructor(private val posterService: Poste
         }
     }
 
+ 
+
     private suspend fun searchByTitle(title: String) {
-        try {
-            posters = posterService.findByTitle(title = title)
-            _userInterface.update {
-                SearchUserInterface(isEmptyScreen = false)
-            }
-        } catch (e: Exception) 
+        _userInterface.value = _userInterface.value.copy(loading = true, error = null)
+        try {      
+		posters = posterService.findByTitle(title = title)
+            _userInterface.value = SearchUserInterface(loading = false,isEmptyScreen = false)
+        } catch (e: Exception) {
+            _userInterface.value =
+                SearchUserInterface(loading = false, error = e.message ?: "Error fetching movies")
             _sideEffect.emit(
                 UnexpectedError(message = e.localizedMessage.orEmpty())
             )
         }
     }
+
+       // private suspend fun searchByTitle(title: String) {
+    //     try {
+    //         posters = posterService.findByTitle(title = title)
+    //         _userInterface.update {
+    //             SearchUserInterface(isEmptyScreen = false)
+    //         }
+    //     } catch (e: Exception) 
+    //         _sideEffect.emit(
+    //             UnexpectedError(message = e.localizedMessage.orEmpty())
+    //         )
+    //     }
+    // }
 }
