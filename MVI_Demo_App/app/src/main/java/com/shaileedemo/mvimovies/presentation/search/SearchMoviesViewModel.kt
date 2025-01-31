@@ -56,7 +56,7 @@ class SearchMoviesViewModel @Inject constructor(private val posterService: Poste
             _userInterface.update {
                 SearchUserInterface(isEmptyScreen = false)
             }
-        } catch (e: Exception) {
+        } catch (e: Exception) 
             _sideEffect.emit(
                 UnexpectedError(message = e.localizedMessage.orEmpty())
             )

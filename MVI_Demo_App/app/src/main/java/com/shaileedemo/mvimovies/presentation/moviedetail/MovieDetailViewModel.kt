@@ -15,7 +15,6 @@ import javax.inject.Inject
 @HiltViewModel
 class MovieDetailViewModel @Inject constructor(
     private val seeMovieDetail: SeeMovieDetail,
-    private val manageFavoriteMovie: ManageFavoriteMovie,
     private val mapper: UiMovieDetailMapper,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
@@ -29,9 +28,4 @@ class MovieDetailViewModel @Inject constructor(
         DetailUserInterface(errorMessage = e.localizedMessage)
     }
 
-    fun addMovieToFavorites(movieId: String, favoriteMovie: Movie.Favorite) {
-        viewModelScope.launch {
-            manageFavoriteMovie.saveFavoriteMovie(favoriteMovie)
-        }
-    }
 }
