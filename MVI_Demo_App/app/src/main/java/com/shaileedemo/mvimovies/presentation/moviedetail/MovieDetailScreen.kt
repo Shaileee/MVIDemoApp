@@ -56,20 +56,20 @@ private fun MovieDetailContent(
 ) {
     val userInterface = produceDetailUserInterface(viewModel = viewModel)
 
-//    val uiState = viewModel.uiState().collectAsState()
-//    remember(movieId) {
-//        viewModel.loadMovieDetailById(movieId)
-//        true
-//    }
-//    when (val currentState = uiState.value) {
-//        MovieDetailUiState.Loading -> DetailLoading()
-//        is MovieDetailUiState.Display -> DetailDisplay(
-//            attributes = currentState.attributes,
-//            paddingValues = paddingValues,
-//        )
-//        MovieDetailUiState.Error -> DetailError()
-//    }
-    DetailDisplay(userInterface = userInterface, paddingValues = paddingValues)
+   val uiState = viewModel.uiState().collectAsState()
+   remember(movieId) {
+       viewModel.loadMovieDetailById(movieId)
+       true
+   }
+   when (val currentState = uiState.value) {
+       MovieDetailUiState.Loading -> DetailLoading()
+       is MovieDetailUiState.Display -> DetailDisplay(
+           attributes = currentState.attributes,
+           paddingValues = paddingValues,
+       )
+       MovieDetailUiState.Error -> DetailError()
+   }
+    // DetailDisplay(userInterface = userInterface, paddingValues = paddingValues)
 }
 
 @Composable
