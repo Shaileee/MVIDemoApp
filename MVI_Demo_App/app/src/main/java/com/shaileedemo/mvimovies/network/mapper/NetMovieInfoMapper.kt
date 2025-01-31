@@ -1,7 +1,7 @@
 package com.shaileedemo.mvimovies.network.mapper
 
-import com.tzion.jetpackmovies.domain.entities.Movie
-import com.tzion.jetpackmovies.network.model.RemoteMovieDetail
+import com.shaileedemo.mvimovies.domain.entities.Movie
+import com.shaileedemo.mvimovies.network.model.RemoteMovieDetail
 import javax.inject.Inject
 
 class NetMovieInfoMapper @Inject constructor() {
